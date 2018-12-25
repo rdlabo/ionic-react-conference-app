@@ -5,7 +5,11 @@ import { withRouter, RouteComponentProps } from 'react-router';
 import { format } from 'date-fns';
 import { IonLabel, IonItemSliding, IonItem, IonItemOptions, IonItemOption, IonAlert } from '@ionic/react';
 import { Session } from '../store/sessions/types';
-import { AlertButton } from '@ionic/react';
+// import { AlertButton } from '@ionic/react';
+export interface AlertButton {
+  text: string;
+  handler: any;
+}
 
 type Props = RouteComponentProps<{}> & typeof mapDispatchToProps & ReturnType<typeof mapStateToProps> & {
   session: Session;
